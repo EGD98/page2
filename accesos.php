@@ -21,9 +21,16 @@ session_start();
      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
        
   </head>
   <style type="text/css">
+    body{
+      background-image: url(http://localhost/esp32/paginasBootstrap/Imagenes/NEON.PNG);
+      background-size: cover;
+      background-attachment: fixed;
+    }
     .h3{
       color:#006699;
       text-shadow: #000000 1px 3px 1px;
@@ -33,9 +40,11 @@ session_start();
       border: 8px solid #008080;
        box-shadow: #CCCCCC 3px 3px 8px;
     }
-
+    .a{
+      font-family: 'Righteous', cursive;
+    }
   </style>
-<body class="bg-secondary">
+<body class="bg-secondary a">
     <!-- Start Menu Gigaticket-->
   	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
     <!-- Navbar content -->
@@ -94,7 +103,7 @@ session_start();
         <div class="container ">
               <div class=" row justify-content-center m-5">
                 <div class="col  mt-3 mx-3 ">
-                  <div class="card" style="width:250px">
+                  <div class="card" style="width:230px">
                      <img class="card-img-top " src="http://localhost/esp32/imagenes/userAdd.png" alt="User Add" style="width:100%">
                      <!--Add .card-img-top or .card-img-bottom to an <img> to place the image at the top or at the bottom inside the card. Note that we have added the image outside of the .card-body to span the entire width -->
                      <div class="card-body"> <!--Use .card-title to add card titles to any heading element. The .card-text class is used to remove bottom margins for a <p> element if it is the last child (or the only one) inside .card-body. The .card-link class adds a blue color to any link, and a hover effect. -->
@@ -105,7 +114,7 @@ session_start();
                   </div>
                 </div>
                 <div class="col  mt-3 mx-3">
-                  <div class="card" style="width:250px">
+                  <div class="card" style="width:230px">
                      <img class="card-img-top" src="http://localhost/esp32/imagenes/userEdit.png" alt="Card image" style="width:100%">
                      <div class="card-body">
                          <h5 class="card-title">Click to Edit User access</h5>
@@ -115,7 +124,7 @@ session_start();
                   </div>
                 </div>
                 <div class="col  mt-3 mx-3">
-                  <div class="card" style="width:250px">
+                  <div class="card" style="width:230px">
                      <img class="card-img-top" src="http://localhost/esp32/imagenes/userDelete.png" alt="Card image" style="width:100%">
                      <div class="card-body">
                          <h5 class="card-title">Click to Delete User access</h5>

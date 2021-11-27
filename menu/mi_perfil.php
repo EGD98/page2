@@ -24,6 +24,11 @@ session_start();
        
   </head>
   <style type="text/css">
+     body{
+      background-image: url(http://localhost/esp32/paginasBootstrap/Imagenes/CIS.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+    }
     .h3{
       color:#006699;
       text-shadow: #000000 1px 3px 1px;

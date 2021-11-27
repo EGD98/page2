@@ -1,5 +1,19 @@
 <?php 
 
+header('Access-Control-Allow-Origin: http://esp32_saulma');
+//if you need cookies or login etc
+header('Access-Control-Allow-Credentials: true');
+  header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+  header('Access-Control-Max-Age: 604800');
+  //if you need special headers
+  header('Access-Control-Allow-Headers: x-requested-with');
+  //exit(0);
+
+
+ ?>
+
+<?php 
+
 	$rfid = $_POST['rfid'];
    $conexion = @new mysqli('localhost', 'root', '', 'wifi access');
 
@@ -56,7 +70,7 @@
 
             $error_msg = $conexion->error;
             $afect_row = $conexion->affected_rows;
-          	$respuesta[] = ['respuesta' => "FALSE", 'error_msg' => $error_msg, 'affected_rows' => $afect_row]; //hubo error en la consulta e insercion de datos a la DB
+          	$respuesta[] = ['respuesta' => FALSE, 'error_msg' => $error_msg, 'affected_rows' => $afect_row]; //hubo error en la consulta e insercion de datos a la DB
           	echo json_encode($respuesta);
           	$consulta->free();
             $conexion->close();
@@ -78,7 +92,7 @@
 
 	            $datos[] = [
 	                
-	                'respuesta' => "TRUE",
+	                'respuesta' => TRUE,
 	                'IdC' => $dato['IdCliente'],
 	                'name' => $dato['Nombre'],
 	                'lastName' => $dato['Apellido'],

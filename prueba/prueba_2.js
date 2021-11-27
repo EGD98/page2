@@ -4,7 +4,7 @@ document.getElementById("rfid").addEventListener("click",
 
 function ObtenerRFID() {
 //setInterval(enviarRfid,2000);
-$.get("http://192.168.1.81/sendRfid", function(lectId) {
+$.get("http://192.168.0.106/sendRfid", function(lectId) {
    
     //console.log(lectId);
     lectId = JSON.stringify(lectId);
@@ -51,7 +51,7 @@ $.get("http://192.168.1.81/sendRfid", function(lectId) {
             nm: "192.168.1.255"
         } 
         */
-        xhttp.open("POST", "http://192.168.1.81/getMatch", true);
+        xhttp.open("POST", "http://192.168.0.106/getMatch", true);
      
         xhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
         xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
